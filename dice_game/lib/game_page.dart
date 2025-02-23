@@ -50,14 +50,10 @@ class GamePageState extends State<GamePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             diceImage(),
-            SizedBox(
-              height: 60,
-            ),
+            SizedBox(height: 60),
             dicesum(),
             Text(rusult),
-            SizedBox(
-              height: 60,
-            ),
+            SizedBox(height: 60),
             DiceButton(),
           ],
         ),
@@ -76,16 +72,16 @@ class GamePageState extends State<GamePage> {
         },
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(15),
-            ),
+            borderRadius: BorderRadius.all(Radius.circular(15)),
           ),
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.red,
         ),
         child: Text(
           "Rolling",
-          style: GoogleFonts.hanaleiFill()
-              .copyWith(fontSize: 20, color: Colors.white),
+          style: GoogleFonts.hanaleiFill().copyWith(
+            fontSize: 20,
+            color: Colors.white,
+          ),
         ),
       ),
     );
@@ -95,13 +91,8 @@ class GamePageState extends State<GamePage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          "Your Dice Sum is :",
-          style: textStyle.copyWith(),
-        ),
-        SizedBox(
-          width: 10,
-        ),
+        Text("Your Dice Sum is :", style: textStyle.copyWith()),
+        SizedBox(width: 10),
         Text(
           " $diceSum",
           style: textStyle.copyWith(color: Colors.red, fontSize: 35),
@@ -114,19 +105,9 @@ class GamePageState extends State<GamePage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(
-          diceList[indexOne],
-          width: 80,
-          height: 80,
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        Image.asset(
-          diceList[indexTwo],
-          width: 80,
-          height: 80,
-        )
+        Image.asset(diceList[indexOne], width: 80, height: 80),
+        SizedBox(width: 10),
+        Image.asset(diceList[indexTwo], width: 80, height: 80),
       ],
     );
   }
